@@ -1,4 +1,4 @@
-as yet unclassified
+logica del juego
 jugar
 | flag |
 flag := 1.

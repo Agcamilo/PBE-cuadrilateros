@@ -9,8 +9,7 @@
 		"juego",
 		"tablero",
 		"interfaz",
-		"sensor",
-		"j"
+		"sensor"
 	],
 	"name" : "Ventana",
 	"type" : "normal"

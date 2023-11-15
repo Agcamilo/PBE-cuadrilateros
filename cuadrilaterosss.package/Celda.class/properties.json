@@ -7,7 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"x",
-		"y"
+		"y",
+		"ocupado",
+		"mouseAction"
 	],
 	"name" : "Celda",
 	"type" : "normal"

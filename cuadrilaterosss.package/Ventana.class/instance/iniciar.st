@@ -9,6 +9,9 @@ a := aux at: a.
 "j:= SimpleButtonMorph new."
 "sensor:= HandMorph new."
 "interfaz addMorph: j."
-self crearTabla: a.
+"self crearTabla: a."
+tablero:= Tablero new initialize:a.
+interfaz addMorph: tablero.
+tablero position: 50@50.
 interfaz openInWorld .
 "self jugar."

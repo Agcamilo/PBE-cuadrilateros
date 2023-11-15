@@ -1,14 +1,12 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "BorderedMorph",
 	"category" : "cuadrilaterosss",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"juego",
-		"tablero",
-		"sensor"
+		"celdas"
 	],
 	"name" : "Tablero",
 	"type" : "normal"

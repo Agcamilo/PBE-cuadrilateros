@@ -1,4 +1,4 @@
-as yet unclassified
+funciones de inicio
 crearTabla: a
 |j  n |
 n := a.
