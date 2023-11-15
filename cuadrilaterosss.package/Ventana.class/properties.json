@@ -8,8 +8,10 @@
 	"instvars" : [
 		"juego",
 		"tablero",
-		"sensor"
+		"interfaz",
+		"sensor",
+		"j"
 	],
-	"name" : "Tablero",
+	"name" : "Ventana",
 	"type" : "normal"
 }
