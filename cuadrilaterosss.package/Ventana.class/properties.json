@@ -9,7 +9,10 @@
 		"juego",
 		"tablero",
 		"interfaz",
-		"sensor"
+		"sensor",
+		"tirar",
+		"banderaDado",
+		"iniciar"
 	],
 	"name" : "Ventana",
 	"type" : "normal"
