@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "cuadrilaterosss",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nombre",
+		"puntaje",
+		"vidas"
+	],
+	"name" : "Jugadores",
+	"type" : "normal"
+}

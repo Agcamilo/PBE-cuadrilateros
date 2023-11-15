@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "cuadrilaterosss",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"valor1",
+		"valor2"
+	],
+	"name" : "Dado",
+	"type" : "normal"
+}

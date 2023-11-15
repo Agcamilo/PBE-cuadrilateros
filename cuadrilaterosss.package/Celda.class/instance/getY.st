@@ -1,0 +1,3 @@
+Getter
+getY
+	^y.

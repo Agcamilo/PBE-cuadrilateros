@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "SimpleSwitchMorph",
+	"category" : "cuadrilaterosss",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"x",
+		"y"
+	],
+	"name" : "Celda",
+	"type" : "normal"
+}
