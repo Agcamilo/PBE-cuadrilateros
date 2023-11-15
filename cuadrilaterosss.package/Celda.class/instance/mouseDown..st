@@ -1,4 +1,4 @@
 event handling
-mouseDown: evt
+mouseDown:evt
 	super mouseDown: evt.
-	mouseAction value.
+	Transcript show: 'chau'.
