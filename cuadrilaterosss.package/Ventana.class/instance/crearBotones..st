@@ -10,7 +10,9 @@ crearBotones:a
 
 tirar:= SimpleButtonMorph new.
 interfaz addMorph: tirar.
-tirar position: 500@500.
+(tamInter<10)ifTrue:[tamInter:=8]. "en el caso del tablero 5x5".
+tirar position: (tamInter*40)@100.
+tirar color: (Color r:0.858 g:0.862 b:0.839). "RGB: 219, 220, 214"
 tirar  target:[  
 	(estadojuego = 1) ifTrue: [  
 	self tirardados. numero contents: valordado asString.]].
@@ -18,13 +20,14 @@ tirar label:'Tirar Dado'.
 tirar actionSelector: #value.
 	
 numero := StringMorph new.
-numero contents: 'El valor del dado aparecera aqui'.
-numero position: 450@450.
+numero contents: 'result'.
+numero position: ((tamInter*40)+25)@80.
 interfaz addMorph: numero.
 
 pasarturno := SimpleButtonMorph new.
 interfaz addMorph: pasarturno.
-pasarturno  position: 500@600.
+pasarturno  position: (tamInter*40)@200.
+pasarturno  color: (Color r:0.858 g:0.862 b:0.839). 
 pasarturno  target:[  estadojuego := 2 "solo para prueba".Transcript show: 'boton pasar, aca se descontaria vida y cambia estado juego'].
 pasarturno label:'Pasar Turno'.
 pasarturno actionSelector: #value.

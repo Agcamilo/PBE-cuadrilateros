@@ -6,6 +6,8 @@ initialize: cantCeldas
 	n:= cantCeldas.
 	"self bounds: (1@1 extent:(n*ancho@n*alto)+(2+self borderWidth ))".
 	self extent: (25*n+10)@(25*n).
+	self color: (Color r:0.827 g:0.827 b:0.827). "La escala del RGB color es de 0 a 1"
+	self borderColor: Color transparent.
 	celdas:= Array2D new:n.
 	
 	1 to: n do:[:i|

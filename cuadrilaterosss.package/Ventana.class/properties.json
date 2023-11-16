@@ -13,7 +13,8 @@
 		"tirar",
 		"iniciar",
 		"numero",
-		"valordado"
+		"valordado",
+		"tamInter"
 	],
 	"name" : "Ventana",
 	"type" : "normal"
