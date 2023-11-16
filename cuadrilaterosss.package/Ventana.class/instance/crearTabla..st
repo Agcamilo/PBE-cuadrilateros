@@ -1,5 +1,6 @@
 funciones de inicio
 crearTabla: a
+"NO SE USA"
 |j  n |
 n := a.
 

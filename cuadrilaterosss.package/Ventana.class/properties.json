@@ -1,18 +1,19 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "BorderedMorph",
 	"category" : "cuadrilaterosss",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"juego",
+		"estadojuego",
+		"pasarturno",
 		"tablero",
 		"interfaz",
-		"sensor",
 		"tirar",
-		"banderaDado",
-		"iniciar"
+		"iniciar",
+		"numero",
+		"valordado"
 	],
 	"name" : "Ventana",
 	"type" : "normal"
