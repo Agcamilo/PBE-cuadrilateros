@@ -19,7 +19,7 @@ initialize: cantCeldas
 			celdas at:i at:j put:celda.
 			self addMorph: (celdas at:i at:j).
 			(celdas at:i at:j) position: ((i-1)*(25))@((j-1)*(25))+origen.
-			celda mouseAction:[Transcript show:'hola'].
+			celda mouseAction: [self verificarCuadrilatero: (celdas at:2 at:2) hasta: (celdas at:i at:j)].
 		]
 	]
 	
