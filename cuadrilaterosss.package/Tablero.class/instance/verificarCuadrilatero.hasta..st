@@ -15,12 +15,14 @@ bandera:=1.
 				aCelda turnOff. aCelda2 turnOff.
 			]
 		].
-	 Transcript show: mayorX; cr.
-	Transcript show: mayorY; cr.
-	Transcript show: menorX; cr.
-	Transcript show: menorX; cr.
-	 (((mayorX - menorX) + 1) = valordado1)   ifFalse: [ bandera := 0 ].
-	 (((mayorY - menorY) + 1) = valordado2)   ifFalse: [ bandera := 0 ].    "no funciona"
+	 (((mayorX - menorX) + 1) = valordado1)   ifTrue:[
+		(((mayorY - menorY) + 1) = valordado2)   ifFalse: [ bandera := 0 ].
+		]
+	ifFalse: [ (((mayorX - menorX) + 1) = valordado2) ifTrue:[
+			(((mayorY - menorY) + 1) = valordado1)  ifFalse: [ bandera := 0 ].
+			]
+		ifFalse:[bandera:=0]
+		].
 	
 	
 	
