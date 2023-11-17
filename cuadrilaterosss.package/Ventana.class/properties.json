@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [
 		"estadojuego",
-		"estadoturno"
+		"estadoturno",
+		"j1",
+		"j2"
 	],
 	"instvars" : [
 		"pasarturno",

@@ -5,5 +5,6 @@ initialize
 	bounds:= 0@0 corner:25@25.
 	self useSquareCorners.
 	self borderWidth: 1.
+	offColor := Color lightGray.
 	self turnOff.
 	
