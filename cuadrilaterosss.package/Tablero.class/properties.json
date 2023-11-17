@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "BorderedMorph",
+	"super" : "Ventana",
 	"category" : "cuadrilaterosss",
 	"classinstvars" : [ ],
 	"pools" : [ ],

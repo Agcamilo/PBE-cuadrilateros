@@ -4,9 +4,11 @@
 	"category" : "cuadrilaterosss",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
+	"classvars" : [
 		"estadojuego",
+		"estadoturno"
+	],
+	"instvars" : [
 		"pasarturno",
 		"tablero",
 		"interfaz",

@@ -15,7 +15,7 @@ tirar position: (tamInter*40)@100.
 tirar color: (Color r:0.858 g:0.862 b:0.839). "RGB: 219, 220, 214"
 tirar  target:[  
 	(estadojuego = 1) ifTrue: [  
-	self tirardados. numero contents: valordado asString.]].
+	self tirardados. numero contents: valordado asString. estadojuego := 2]].
 tirar label:'Tirar Dado'.
 tirar actionSelector: #value.
 	
@@ -28,6 +28,9 @@ pasarturno := SimpleButtonMorph new.
 interfaz addMorph: pasarturno.
 pasarturno  position: (tamInter*40)@200.
 pasarturno  color: (Color r:0.858 g:0.862 b:0.839). 
-pasarturno  target:[  estadojuego := 2 "solo para prueba".Transcript show: 'boton pasar, aca se descontaria vida y cambia estado juego'].
+pasarturno  target:[ (estadoturno = 1) ifTrue: [ estadoturno := 2 ]
+	                                    ifFalse: [ estadoturno := 1 ].
+	estadojuego := 1
+	 ].
 pasarturno label:'Pasar Turno'.
 pasarturno actionSelector: #value.

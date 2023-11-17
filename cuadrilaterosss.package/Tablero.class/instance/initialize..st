@@ -1,8 +1,7 @@
 initialization
 initialize: cantCeldas
-	|celda origen n|
+	|celda origen n resguardo|
 	super initialize.
-	celda:= Celda new.
 	n:= cantCeldas.
 	"self bounds: (1@1 extent:(n*ancho@n*alto)+(2+self borderWidth ))".
 	self extent: (25*n+10)@(25*n).
@@ -19,7 +18,17 @@ initialize: cantCeldas
 			celdas at:i at:j put:celda.
 			self addMorph: (celdas at:i at:j).
 			(celdas at:i at:j) position: ((i-1)*(25))@((j-1)*(25))+origen.
-			celda mouseAction: [self verificarCuadrilatero: (celdas at:2 at:2) hasta: (celdas at:i at:j)].
-		]
-	]
-	
+			celda mouseAction: [
+				(estadojuego = 2) ifTrue: [ resguardo := (celdas at:i at:j). estadojuego := 3.
+				(estadoturno = 1) ifTrue: [  	
+					(celdas at: i at: j) color: Color pink. ]
+				ifFalse: [ (celdas at: i at: j) color: Color blue ] ]
+				ifFalse: [ 
+				self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j). 
+				estadojuego := 1.
+				(estadoturno = 1) ifTrue: [ estadoturno := 2]
+				                  ifFalse: [ estadoturno := 1 ].
+				].
+		].
+	].
+	 ]
