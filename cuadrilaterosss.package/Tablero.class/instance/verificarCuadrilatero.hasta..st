@@ -11,7 +11,8 @@ bandera:=1.
 (estadojuego = 3) ifTrue: [  
 	menorX to: mayorX  do:[:i|
 		menorY to: mayorY do:[:j|
-				((celdas at: i at:j) isOn) ifTrue: [ bandera:=0 ].
+				((celdas at: i at:j) getState) ifTrue: [ bandera:=0 ].
+				aCelda turnOff. aCelda2 turnOff.
 			]
 		].
 	(bandera=1)ifTrue:[
@@ -22,7 +23,7 @@ bandera:=1.
 						(celdas at: i at: j) color: Color red. j1 := j1 + 1]
 					   ifFalse: [ (celdas at: i at: j) color: Color orange. j2 := j2 + 1 ].
 					
-	
+						(celdas at: i at:j) setState: true.
 						(celdas at: i at:j) mouseAction: [ nil ].
 					]
 			]]]

@@ -7,4 +7,4 @@ initialize
 	self borderWidth: 1.
 	offColor := Color lightGray.
 	self turnOff.
-	
+	ocupado:= false.
