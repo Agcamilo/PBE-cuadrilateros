@@ -1,16 +1,22 @@
 as yet unclassified
 verificarCuadrilatero: aCelda hasta: aCelda2
-|bandera|
+|bandera mayorX mayorY menorX menorY|
+Transcript show: aCelda getX;cr.
+((aCelda getX) > (aCelda2 getX)) ifTrue: [ mayorX :=aCelda getX . menorX:=aCelda2 getX] "Esto para el control mas facil de la matriz"
+									ifFalse:[mayorX :=aCelda2 getX . menorX:=aCelda getX]. 
+((aCelda getY) > (aCelda2 getY)) ifTrue: [ mayorY :=aCelda getY . menorY:=aCelda2 getY] 
+										ifFalse:[mayorY :=aCelda2 getY . menorY:=aCelda getY]. 
+"con mayor y menor XY puedo hacer que revise y dibuje sin importar como el usuario toco los botones"
 bandera:=1.
 (estadojuego = 3) ifTrue: [  
-	(aCelda getX) to: (aCelda2 getX) do:[:i|
-		(aCelda getY) to: (aCelda2 getY) do:[:j|
+	menorX to: mayorX  do:[:i|
+		menorY to: mayorY do:[:j|
 				((celdas at: i at:j) isOn) ifTrue: [ bandera:=0 ].
 			]
 		].
 	(bandera=1)ifTrue:[
-		(aCelda getX) to: (aCelda2 getX) do:[:i|
-				(aCelda getY) to: (aCelda2 getY) do:[:j|
+		menorX to: mayorX do:[:i|
+				menorY to: mayorY do:[:j|
 						"(celdas at: i at:j) toggleState "
 						(estadoturno = 1 ) ifTrue: [  
 						(celdas at: i at: j) color: Color red. j1 := j1 + 1]
@@ -20,4 +26,3 @@ bandera:=1.
 						(celdas at: i at:j) mouseAction: [ nil ].
 					]
 			]]]
-	

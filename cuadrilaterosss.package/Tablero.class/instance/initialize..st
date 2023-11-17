@@ -12,13 +12,16 @@ initialize: cantCeldas
 	1 to: n do:[:i|
 		1 to: n do:[:j|
 			celda:= Celda new.
-			celda setX: i.
-			celda setY:j.
 			origen:= self innerBounds origin.
 			celdas at:i at:j put:celda.
+			(celdas at:i at:j) setX: i.
+			(celdas at:i at:j) setY: j.
+			
 			self addMorph: (celdas at:i at:j).
+			
 			(celdas at:i at:j) position: ((i-1)*(25))@((j-1)*(25))+origen.
-			celda mouseAction: [
+			
+			(celdas at:i at:j) mouseAction: [
 				(estadojuego = 2) ifTrue: [ resguardo := (celdas at:i at:j). estadojuego := 3.
 				(estadoturno = 1) ifTrue: [  	
 					(celdas at: i at: j) color: Color pink. ]

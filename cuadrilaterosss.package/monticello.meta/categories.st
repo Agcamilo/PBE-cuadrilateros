@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #cuadrilaterosss!
-SystemOrganization addCategory: #'cuadrilaterosss-Cuadrilatero'!
+SystemOrganization addCategory: #'cuadrilaterosss-Manifest'!
