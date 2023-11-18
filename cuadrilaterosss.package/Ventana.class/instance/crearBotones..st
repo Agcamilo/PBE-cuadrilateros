@@ -1,6 +1,6 @@
 as yet unclassified
-crearBotones:a
-
+crearBotones: a
+|reintentar|
 
    tablero:= Tablero new initialize:a.
 	interfaz addMorph: tablero.
@@ -41,13 +41,28 @@ puntaje2 contents: 'J2'.
 puntaje2 position: ((tamInter*40)+5)@150.
 interfaz addMorph: puntaje2.
 
+reintentar := SimpleButtonMorph new.
+interfaz addMorph: reintentar.
+reintentar position: (tamInter*40)@300.
+reintentar color: (Color r:0.858 g:0.862 b:0.839). 
+reintentar label:'Reintentar'.
+reintentar actionSelector: #value.
+reintentar target: [ 
+	Transcript show: estadoturno .
+	Transcript show: ultimojugador .
+	(estadoturno = ultimojugador) ifTrue: [  
+	self cambiarestados. 
+	estadojuego := 2
+	].
+	 ].
+
+
 pasarturno := SimpleButtonMorph new.
 interfaz addMorph: pasarturno.
 pasarturno  position: (tamInter*40)@200.
 pasarturno  color: (Color r:0.858 g:0.862 b:0.839). 
-pasarturno  target:[ (estadoturno = 1) ifTrue: [ estadoturno := 2 ]
-	                                    ifFalse: [ estadoturno := 1 ].
-	estadojuego := 1
+pasarturno  target:[ self cambiarestados 
+	"aca se tiene q descontar una vida"
 	 ].
 pasarturno label:'Pasar Turno'.
 pasarturno actionSelector: #value.

@@ -9,6 +9,7 @@ a := aux at: a.
 tamInter :=a.
 estadojuego := 1.
 estadoturno := 1.
+ultimojugador :=2.
 j1 := 0.
 j2:= 0.
 self crearBotones: a.

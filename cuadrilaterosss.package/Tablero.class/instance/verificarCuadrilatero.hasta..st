@@ -30,10 +30,12 @@ bandera:=1.
 		menorX to: mayorX do:[:i|
 				menorY to: mayorY do:[:j|
 						"(celdas at: i at:j) toggleState "
-						(estadoturno = 1 ) ifTrue: [  
+						(estadoturno = 1 ) ifTrue: [  ultimojugador := 1.
 						(celdas at: i at: j) color: Color red. j1 := j1 + 1. puntaje1  contents: j1 asString ]
-					   ifFalse: [ (celdas at: i at: j) color: Color orange. j2 := j2 + 1 . puntaje2  contents: j2 asString].
-					
+					   ifFalse: [ ultimojugador := 2.
+						(celdas at: i at: j) color: Color orange. j2 := j2 + 1 . puntaje2  contents: j2 asString].
+					    
+					 
 						(celdas at: i at:j) setState: true.
 						(celdas at: i at:j) mouseAction: [ nil ].
 					]
