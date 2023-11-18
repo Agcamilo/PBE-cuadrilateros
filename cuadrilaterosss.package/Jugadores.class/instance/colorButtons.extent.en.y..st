@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 colorButtons: aColor extent: posicion en: aButton y:ven 
 	aButton extent: 30@30.
 	aButton borderWidth: 1.

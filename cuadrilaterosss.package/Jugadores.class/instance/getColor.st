@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 getColor
 	"devuelve el color elegido"
 	"scope: color"
