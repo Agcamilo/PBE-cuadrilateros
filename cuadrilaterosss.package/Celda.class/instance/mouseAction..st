@@ -1,3 +1,4 @@
 accessing
 mouseAction: unBloque
-	mouseAction:= unBloque.
+	(ocupado) ifFalse:[
+	mouseAction:= unBloque.]

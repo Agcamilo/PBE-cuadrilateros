@@ -18,10 +18,11 @@ bandera:=1.
 	 (((mayorX - menorX) + 1) = valordado1)   ifTrue:[
 		(((mayorY - menorY) + 1) = valordado2)   ifFalse: [ bandera := 0 ].
 		]
-	ifFalse: [ (((mayorX - menorX) + 1) = valordado2) ifTrue:[
-			(((mayorY - menorY) + 1) = valordado1)  ifFalse: [ bandera := 0 ].
+			ifFalse: [
+					(((mayorX - menorX) + 1) = valordado2) ifTrue:[
+					(((mayorY - menorY) + 1) = valordado1)  ifFalse: [ bandera := 0 ].
 			]
-		ifFalse:[bandera:=0]
+			ifFalse:[bandera:=0]
 		].
 	
 	
@@ -31,12 +32,14 @@ bandera:=1.
 				menorY to: mayorY do:[:j|
 						"(celdas at: i at:j) toggleState "
 						(estadoturno = 1 ) ifTrue: [  ultimojugador := 1.
-						(celdas at: i at: j) color: Color red. j1 := j1 + 1. puntaje1  contents: j1 asString ]
+						(celdas at: i at: j) color: Color red. j1 := j1 + 1. puntaje1  contents: j1 asString.(celdas at: i at:j) offColor:Color red ]
+					
 					   ifFalse: [ ultimojugador := 2.
-						(celdas at: i at: j) color: Color orange. j2 := j2 + 1 . puntaje2  contents: j2 asString].
+						(celdas at: i at: j) color: Color orange. j2 := j2 + 1 . puntaje2  contents: j2 asString.(celdas at: i at:j) offColor:Color orange].
 					    
 					 
 						(celdas at: i at:j) setState: true.
 						(celdas at: i at:j) mouseAction: [ nil ].
+						
 					]
 			]]]
