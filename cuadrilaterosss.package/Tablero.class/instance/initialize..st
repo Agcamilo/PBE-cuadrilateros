@@ -27,8 +27,10 @@ initialize: cantCeldas
 					(celdas at: i at: j) color: Color pink. ]
 				ifFalse: [ (celdas at: i at: j) color: Color blue ] ]
 				ifFalse: [
-				self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j). 
-				estadojuego := 1.
+				self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j).
+				
+				estadojuego :=1.
+				
 				 (estadoturno = 1) ifTrue: [ estadoturno := 2]
 				                  ifFalse: [ estadoturno := 1 ].
 					
