@@ -1,4 +1,4 @@
-logica del juego
+funciones de inicio
 jugar
 |ju1 ju2 ini Ven|
 	p1:= Jugadores new.

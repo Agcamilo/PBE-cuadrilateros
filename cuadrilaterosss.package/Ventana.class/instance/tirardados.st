@@ -1,4 +1,4 @@
-as yet unclassified
+game logic
 tirardados
 |aleatorio|
 aleatorio :=Random new.
