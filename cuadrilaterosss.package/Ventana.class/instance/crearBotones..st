@@ -2,7 +2,7 @@ as yet unclassified
 crearBotones: a
 |reintentar|
 
-   tablero:= Tablero new initialize:a.
+   tablero:= Tablero new initialize:tamInter.
 	interfaz addMorph: tablero.
 	tablero position: 50@50.
 	
