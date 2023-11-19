@@ -1,4 +1,4 @@
 initialization
 initialize
-	vidas:=3.
+	vidas:=20.
 	puntaje:=0.
