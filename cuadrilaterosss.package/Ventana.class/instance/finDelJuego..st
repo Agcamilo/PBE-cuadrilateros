@@ -7,7 +7,7 @@ finDelJuego: unJugador
 	ventana extent: 300@200.
 	ventana setLabel: 'Fin del juego'.
 	ganador := StringMorph new.
-	ganador contents: 'el ganador es ', p1 getNombre,' con:',(p1 getPuntaje) asString,' puntos'.
+	ganador contents: 'el ganador es ', unJugador getNombre,' con:',(unJugador getPuntaje) asString,' puntos'.
 	ventana  addMorph: ganador.
 	ventana addMorph: numerodado1.
 	ganador position: 50@50.

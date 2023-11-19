@@ -8,6 +8,8 @@ pasarturno  target:[
 	(estadoturno  =1) ifTrue:[p1 reducirVida.] 
 						  ifFalse:[ p2 reducirVida.].
 	self cambiarestados.
+				(p1 getVida = 0) ifTrue:[self finDelJuego: p2. estadojuego :=0].
+				(p2 getVida = 0) ifTrue:[self finDelJuego: p1. estadojuego :=0].
 	 ].
 pasarturno label:'Pasar Turno'.
 pasarturno actionSelector: #value.
