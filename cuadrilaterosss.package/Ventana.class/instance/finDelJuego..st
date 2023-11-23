@@ -1,8 +1,9 @@
 game logic
 finDelJuego: unJugador
-	"motivo 1= fin por tablero lleno
-	motivo 2= un jugador se quedo sin vida"
+	
 	|ventana ganador|
+	estadojuego := 0.
+	estadoturno := 0.
 	ventana:= SystemWindow new.
 	ventana extent: 300@200.
 	ventana setLabel: 'Fin del juego'.
