@@ -44,7 +44,7 @@ jugar
 		].
 	
 	logo:= ImageMorph new.
-	logo form: (Form fromFileNamed:'C:\Users\julia\OneDrive\Escritorio\LOGO.png').
+	logo form: (Form fromFileNamed:'pharo-local/iceberg/Agcamilo/PBE-cuadrilateros/Dados/LOGO.png').
 	logo position: 0@50.
 	Ven addMorph: logo.
 	Ven addMorph: ju1.
@@ -54,7 +54,7 @@ jugar
 
 	ini:= SimpleButtonMorph new.
 	ini position: 200@390.
-	ini label: 'INICIAR'.
+	ini label: 'JUGAR'.
 	ini extent: 620@60.
 	ini actionSelector: #value.
 	ini target:[
