@@ -25,7 +25,9 @@
 		"iniciar",
 		"numerodado1",
 		"numerodado2",
-		"tamInter"
+		"tamInter",
+		"cora1",
+		"cora2"
 	],
 	"name" : "Ventana",
 	"type" : "normal"

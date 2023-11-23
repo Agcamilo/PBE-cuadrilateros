@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "ImageMorph",
+	"category" : "cuadrilaterosss",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"IMAGEN"
+	],
+	"name" : "Corazones",
+	"type" : "normal"
+}
