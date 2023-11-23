@@ -15,12 +15,12 @@ bandera:=1.
 				aCelda turnOff. aCelda2 turnOff.
 			]
 		].
-	 (((mayorX - menorX) + 1) = valordado1)   ifTrue:[
-		(((mayorY - menorY) + 1) = valordado2)   ifFalse: [ bandera := 0 ].
+	 (((mayorX - menorX) + 1) = (D1 getValorJ ))   ifTrue:[
+		(((mayorY - menorY) + 1) = (D2 getValorJ ))   ifFalse: [ bandera := 0 ].
 		]
 			ifFalse: [
-					(((mayorX - menorX) + 1) = valordado2) ifTrue:[
-					(((mayorY - menorY) + 1) = valordado1)  ifFalse: [ bandera := 0 ].
+					(((mayorX - menorX) + 1) = (D2 getValorJ )) ifTrue:[
+					(((mayorY - menorY) + 1) = (D1 getValorJ ))  ifFalse: [ bandera := 0 ].
 			]
 			ifFalse:[bandera:=0]
 		].

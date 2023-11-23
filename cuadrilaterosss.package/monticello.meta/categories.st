@@ -1,2 +1,1 @@
-SystemOrganization addCategory: #cuadrilaterosss!
-SystemOrganization addCategory: #'cuadrilaterosss-Manifest'!
+self packageOrganizer ensurePackage: #cuadrilaterosss withTags: #(#Manifest)!
