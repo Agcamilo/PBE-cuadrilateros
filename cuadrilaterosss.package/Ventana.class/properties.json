@@ -18,7 +18,6 @@
 		"valordado2"
 	],
 	"instvars" : [
-		"a",
 		"pasarturno",
 		"tablero",
 		"interfaz",

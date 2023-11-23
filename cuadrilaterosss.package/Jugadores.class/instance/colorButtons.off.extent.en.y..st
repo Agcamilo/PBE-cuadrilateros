@@ -1,4 +1,4 @@
-as yet unclassified
+Logica
 colorButtons: aColor off: aColorOff extent: posicion en: aButton y:ven 
 	aButton extent: 30@30.
 	aButton borderWidth: 1.

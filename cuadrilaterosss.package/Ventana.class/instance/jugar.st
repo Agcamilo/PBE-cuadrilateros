@@ -1,6 +1,6 @@
 funciones de inicio
 jugar
-|ju1 ju2 ini dim Ven aux|
+|ju1 ju2 ini dim Ven aux |
 	p1:= Jugadores new.
 	p2:= Jugadores new.
 	Ven:= SystemWindow new.
@@ -33,10 +33,10 @@ jugar
 	dim label: 'Dimension del tablero'.
 	dim actionSelector: #value.
 	dim target:[
-		a := UIManager default
+		tamInter  := UIManager default
 	chooseFrom: #('5x5' '10x10' '15x15' '20x20') lines: #(2 4) message: 'Elija dimensiones del tablero'.
 		aux := #(5 10 15 20).
-		a := aux at: a.
+		tamInter  := aux at: tamInter .
 		dim color: (Color r:46/255 g:155/255 b:119/255).
 		].
 	
