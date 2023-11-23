@@ -13,12 +13,12 @@ setColor
 	c6:= SimpleButtonMorph new.
 	
 	ven extent: 150@300.
-	self colorButtons:Color red extent: (30@50) en: c1 y: ven.
-	self colorButtons: Color green extent:(30@90) en:c2 y:ven.
-	self colorButtons: Color yellow extent:(30@130) en:c3 y:ven.
-	self colorButtons: Color blue extent:(70@50) en:c4 y:ven.
-	self colorButtons: Color pink extent:(70@90) en:c5 y:ven.
-	self colorButtons: Color black extent:(30@130) en:c6 y:ven.
+	self colorButtons: (Color r:73/255 g:208/255 b:163/255) off: (Color r:66/255 g:187/255 b:147/255) extent: (30@50) en: c1 y: ven.
+	self colorButtons: (Color r:31/255 g:136/255 b:214/255) off: (Color r:27/255 g:108/255 b:168/255) extent:(30@90) en:c2 y:ven.
+	self colorButtons: (Color r:212/255 g:53/255 b:31/255) off: (Color r:189/255 g:45/255 b:25/255) extent:(30@130) en:c3 y:ven.
+	self colorButtons: (Color r:218/255 g:208/255 b:13/255) off: (Color r:191/255 g:183/255 b:13/255) extent:(70@50) en:c4 y:ven.
+	self colorButtons: (Color r:227/255 g:148/255 b:47/255) off: (Color r:185/255 g:121/255 b:38/255) extent:(70@90) en:c5 y:ven.
+	self colorButtons: (Color r:202/255 g:56/255 b:206/255) off: (Color r:171/255 g:51/255 b:175/255) extent:(70@130) en:c6 y:ven.
 	ven addMorph: c1.
 	ven addMorph: c2.
 	ven addMorph: c3.
