@@ -26,17 +26,17 @@ initialize: cantCeldas
 					
 					(estadoturno = 1) ifTrue: [ 
 						 ultimojugador := 1.
-						(celdas at: i at: j) color: (p1 getColor).
+						(celdas at: i at: j) color: (p1 getColorOff).
 						 p1 incrementarPuntos . 
 						puntaje1  contents: (p1 getPuntaje ) asString.
-						(celdas at: i at:j) offColor:(p1 getColor).
+						(celdas at: i at:j) offColor:(p1 getColorOff).
 						 ]
 					ifFalse: [
 						ultimojugador := 2.
-						(celdas at: i at: j) color: (p2 getColor).
+						(celdas at: i at: j) color: (p2 getColorOff).
 						 p2 incrementarPuntos . 
 						puntaje2  contents: (p2 getPuntaje ) asString.
-						(celdas at: i at:j) offColor:(p2 getColor).
+						(celdas at: i at:j) offColor:(p2 getColorOff).
 						  ].
 					
 					estadojuego :=1.
@@ -45,8 +45,8 @@ initialize: cantCeldas
 				ifFalse: [  
 				(estadojuego = 2) ifTrue: [ resguardo := (celdas at:i at:j). estadojuego := 3.
 				(estadoturno = 1) ifTrue: [  	
-					(celdas at: i at: j) color: Color pink. ]
-				ifFalse: [ (celdas at: i at: j) color: Color blue ] ]
+					(celdas at: i at: j) color: (p1 getColor). ]
+				ifFalse: [ (celdas at: i at: j) color: (p2 getColor) ] ]
 				ifFalse: [
 				self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j).
 				
