@@ -6,7 +6,7 @@ cora2:= Corazones new. cora2 initialize. cora2  position: (tamInter*40)@250.
 interfaz addMorph: pasarturno.
 interfaz addMorph: cora1.
 interfaz addMorph: cora2.
-pasarturno  position: (tamInter*40)@200.
+pasarturno  position: (tamInter*20)@((tamInter*28)+50).
 pasarturno  color: (Color r:0.858 g:0.862 b:0.839). 
 pasarturno  target:[
 	(estadojuego ~= 0) ifTrue:[

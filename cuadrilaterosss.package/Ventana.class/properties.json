@@ -13,6 +13,7 @@
 		"p2",
 		"puntaje1",
 		"puntaje2",
+		"tamInter",
 		"turno",
 		"ultimojugador",
 		"valordado1",
@@ -26,7 +27,6 @@
 		"iniciar",
 		"numerodado1",
 		"numerodado2",
-		"tamInter",
 		"cora1",
 		"cora2"
 	],
