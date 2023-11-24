@@ -1,10 +1,12 @@
 funciones de inicio
 jugar
-|ju1 ju2 ini dim Ven aux logo|
+|ju1 ju2 ini dim Ven aux logo bandera1 bandera2|
 	p1:= Jugadores new.
 	p2:= Jugadores new.
 	Ven:= SystemWindow new.
 	Ven extent: 1200@800.
+	bandera1 := 0.
+	bandera2 := 0.
 	
 	ju1 := SimpleButtonMorph new.
 	ju1 position: 200@340.
@@ -12,6 +14,7 @@ jugar
 	ju1 extent: 305@30.
 	ju1 actionSelector: #value.
 	ju1 target:[
+		bandera1 := 1.
 		p1 setNombre: 1.
 		p1 setColor.
 		"Ven removeMorph: ju1."
@@ -24,6 +27,7 @@ jugar
 	ju2 extent: 305@30.
 	ju2 actionSelector: #value.
 	ju2 target:[
+		bandera2 := 1.
 		p2 setNombre: 2.
 		p2 setColor.
 		"Ven removeMorph: ju2."
@@ -58,9 +62,11 @@ jugar
 	ini extent: 620@60.
 	ini actionSelector: #value.
 	ini target:[
+		((bandera1 = 1 )& (bandera2 = 1) & (aux ~= nil)) ifTrue: [  
 		Ven removeMorph: ini.
 		Ven delete.
 		self iniciar.
+		].
 		].
 	Ven addMorph: ini.
 	Ven openInWorld .

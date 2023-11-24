@@ -8,6 +8,8 @@ self iniciarDado.
 
 self iniciarPuntajes.
 
+self crearTurno.
+
 self crearBotonReintentar.
 
 
