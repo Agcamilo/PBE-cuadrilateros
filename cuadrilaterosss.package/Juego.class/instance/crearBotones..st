@@ -10,8 +10,4 @@ self iniciarPuntajes.
 
 self crearTurno.
 
-self crearBotonReintentar.
-
-
-
 self crearPasasTurno.

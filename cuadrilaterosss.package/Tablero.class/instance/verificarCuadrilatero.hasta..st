@@ -1,7 +1,6 @@
 logica
 verificarCuadrilatero: aCelda hasta: aCelda2
 |bandera mayorX mayorY menorX menorY |
-"Transcript show: aCelda getX;cr. "
 ((aCelda getX) > (aCelda2 getX)) ifTrue: [ mayorX :=aCelda getX . menorX:=aCelda2 getX] "Esto para el control mas facil de la matriz"
 									ifFalse:[mayorX :=aCelda2 getX . menorX:=aCelda getX]. 
 ((aCelda getY) > (aCelda2 getY)) ifTrue: [ mayorY :=aCelda getY . menorY:=aCelda2 getY] 

@@ -51,7 +51,10 @@ initialize: cantCeldas
 				ifFalse: [
 				aux:= self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j).
 				
-				
+				(self isFull: tamInter) ifTrue:[ "si el tablero esta lleno se verifica que jugador tiene mas puntos y se llama al fin del juego"
+					(p1 getPuntaje >= p2 getPuntaje) ifTrue:[self finDelJuego: p1]
+																ifFalse:[self finDelJuego: p2]
+					].
 				(aux = 1) ifTrue:[
 				estadojuego :=1.
 				 self cambiarestados.]
