@@ -21,7 +21,7 @@ setColor
 	self colorButtons: (Color r:73/255 g:208/255 b:163/255) off: (Color r:66/255 g:187/255 b:147/255) extent: (15@70) en: c1 y: ven.
 	self colorButtons: (Color r:31/255 g:136/255 b:214/255) off: (Color r:27/255 g:108/255 b:168/255) extent:(15@140) en:c2 y:ven.
 	self colorButtons: (Color r:212/255 g:53/255 b:31/255) off: (Color r:189/255 g:45/255 b:25/255) extent:(15@210) en:c3 y:ven.
-	self colorButtons: (Color r:218/255 g:208/255 b:13/255) off: (Color r:191/255 g:183/255 b:13/255) extent:(80@70) en:c4 y:ven.
+	self colorButtons: (Color r:245/255 g:245/255 b:245/255) off: (Color r:235/255 g:235/255 b:235/255) extent:(80@70) en:c4 y:ven.
 	self colorButtons: (Color r:227/255 g:148/255 b:47/255) off: (Color r:185/255 g:121/255 b:38/255) extent:(80@140) en:c5 y:ven.
 	self colorButtons: (Color r:202/255 g:56/255 b:206/255) off: (Color r:171/255 g:51/255 b:175/255) extent:(80@210) en:c6 y:ven.
 	
