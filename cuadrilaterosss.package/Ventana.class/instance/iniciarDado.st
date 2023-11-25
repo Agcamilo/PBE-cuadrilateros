@@ -6,7 +6,6 @@ D2:= DADO new. D2 initialize. D2 position: ((tamInter*40)+60)@10."Crea dado 2 y 
 interfaz addMorph: tirar.
 interfaz addMorph: D1. "Agrega el primer dado"
 interfaz addMorph: D2. "Agrega el segundo dado"
-(tamInter<10)ifTrue:[tamInter:=8]. "en el caso del tablero 5x5".
 tirar position: (tamInter*40)@100.
 tirar color: (Color r:0.858 g:0.862 b:0.839). "RGB: 219, 220, 214"
 tirar  target:[ 
