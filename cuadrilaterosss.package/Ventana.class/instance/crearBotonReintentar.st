@@ -1,11 +1,17 @@
 botones
 crearBotonReintentar
-|reintentar|
+|reintentar imagen|
 reintentar := SimpleButtonMorph new.
 interfaz addMorph: reintentar.
-reintentar position: (tamInter*10)@((tamInter*28)+50).
+imagen:= ImageMorph new.
+imagen form: (Form fromFileNamed: 'pharo-local/iceberg/Agcamilo/PBE-cuadrilateros/Dados/BOTONREINTENTAR.png').
+imagen position: ((tamInter*25)+85)@(295+extra).
+interfaz addMorph: imagen.
+reintentar position: ((tamInter*25)+100)@(320+extra).
 reintentar color: (Color r:0.858 g:0.862 b:0.839). 
 reintentar label:'Reintentar'.
+reintentar extent: 120@25.
+reintentar borderWidth: 0.
 reintentar actionSelector: #value.
 reintentar target: [ 
 	Transcript show: estadoturno .

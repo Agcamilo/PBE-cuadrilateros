@@ -5,13 +5,11 @@ interfaz beUnresizeable.
 estadojuego := 1.
 estadoturno := 1.
 ultimojugador :=2.
+(tamInter asNumber ) caseOf:{
+		10 ->[interfaz extent: (55*tamInter)@(36*tamInter). extra:= 0.].
+		15 ->[interfaz extent: (44*tamInter)@(32*tamInter). extra:= 50.].
+		20 ->[interfaz extent: (40*tamInter)@(36*tamInter). extra:= 50.].
+}.
 self crearBotones: tamInter.
-interfaz extent: (55*tamInter )@(35*tamInter ). "tamaño de la ventana proporcional al tamaño del tablero"
-"interfaz relabel."
+extra:= 0.
 interfaz openInWorld.
-
-
-
-
-
-
