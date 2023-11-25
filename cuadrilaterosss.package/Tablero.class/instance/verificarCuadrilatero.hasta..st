@@ -12,7 +12,7 @@ bandera:=1.
 	menorX to: mayorX  do:[:i|
 		menorY to: mayorY do:[:j|
 				((celdas at: i at:j) getState) ifTrue: [ bandera:=0 ].
-				aCelda turnOff. aCelda2 turnOff.
+				aCelda turnOff. aCelda2 turnOff. 
 			]
 		].
 	 (((mayorX - menorX) + 1) = (D1 getValorJ ))   ifTrue:[
@@ -51,4 +51,6 @@ bandera:=1.
 						(celdas at: i at:j) mouseAction: [ nil ].
 						
 					]
-			]]]
+			]]].
+
+^bandera.

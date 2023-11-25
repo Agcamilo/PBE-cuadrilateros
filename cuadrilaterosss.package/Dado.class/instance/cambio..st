@@ -1,4 +1,4 @@
-as yet unclassified
+logica
 cambio: n
 COMODIN:= false.
 (n) caseOf:{

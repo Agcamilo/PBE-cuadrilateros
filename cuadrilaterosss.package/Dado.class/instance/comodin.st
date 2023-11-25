@@ -1,4 +1,4 @@
-as yet unclassified
+logica
 comodin
 |RTA|
 (COMODIN)ifTrue:[

@@ -1,6 +1,7 @@
 initialization
 initialize: cantCeldas
-	|celda origen n resguardo|
+	|celda origen n resguardo aux|
+	
 	super initialize.
 	n:= cantCeldas.
 	self extent: (25*n)@(25*n).
@@ -21,7 +22,7 @@ initialize: cantCeldas
 			(celdas at:i at:j) position: ((i-1)*(25))@((j-1)*(25))+origen.
 			
 			(celdas at:i at:j) mouseAction: [
-				
+				(estadojuego ~=1) ifTrue:[
 				((valordado1 = 1) & (valordado2 = 1)) ifTrue:[
 					
 					(estadoturno = 1) ifTrue: [ 
@@ -48,11 +49,13 @@ initialize: cantCeldas
 					(celdas at: i at: j) color: (p1 getColor). ]
 				ifFalse: [ (celdas at: i at: j) color: (p2 getColor) ] ]
 				ifFalse: [
-				self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j).
+				aux:= self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j).
 				
+				
+				(aux = 1) ifTrue:[
 				estadojuego :=1.
-				
-				 self cambiarestados.
+				 self cambiarestados.]
+				ifFalse:[ estadojuego := 2]
 					
 				].
 			].
@@ -62,4 +65,4 @@ initialize: cantCeldas
 	
 	
 	].
-	 ]
+	 ]].
