@@ -23,7 +23,7 @@ initialize: cantCeldas
 			
 			(celdas at:i at:j) mouseAction: [
 				(estadojuego ~=1) ifTrue:[
-				((valordado1 = 1) & (valordado2 = 1)) ifTrue:[
+				(((D1 getValorJ ) = 1) & ((D2 getValorJ) = 1)) ifTrue:[
 					
 					(estadoturno = 1) ifTrue: [ 
 						 ultimojugador := 1.

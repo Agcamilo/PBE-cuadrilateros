@@ -16,20 +16,15 @@
 		"puntaje2",
 		"tamInter",
 		"turno",
-		"ultimojugador",
-		"valordado1",
-		"valordado2"
+		"ultimojugador"
 	],
 	"instvars" : [
-		"pasarturno",
+		"bPasarturno",
 		"tablero",
 		"interfaz",
-		"tirar",
-		"iniciar",
-		"numerodado1",
-		"numerodado2",
-		"cora1",
-		"cora2"
+		"bTirar",
+		"bCora1",
+		"bCora2"
 	],
 	"name" : "Juego",
 	"type" : "normal"
