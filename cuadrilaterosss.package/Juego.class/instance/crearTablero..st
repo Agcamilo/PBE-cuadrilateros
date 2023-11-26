@@ -1,7 +1,7 @@
 botones
 crearTablero: tamaño
 |marco|
-	tablero:= Tablero new initialize:tamInter.
+	tablero:= Tablero new initialize:tamInter perteneceA: self.
 	interfaz addMorph: tablero.
 	marco:= ImageMorph new.
 	(tamInter) caseOf:{

@@ -1,14 +1,15 @@
 initialization
-initialize: cantCeldas
+initialize: cantCeldas perteneceA: unJuego
 	|celda origen n resguardo aux|
-	
 	super initialize.
+	juego:= unJuego.
+	p1:= unJuego getPersona: 1.
+	p2:= unJuego getPersona: 2.
 	n:= cantCeldas.
 	self extent: (25*n)@(25*n).
 	self color: (Color r:0.827 g:0.827 b:0.827). "La escala del RGB color es de 0 a 1"
 	self borderColor: Color transparent.
 	celdas:= Array2D new:n.
-	
 	1 to: n do:[:i|
 		1 to: n do:[:j|
 			celda:= Celda new.
@@ -22,43 +23,43 @@ initialize: cantCeldas
 			(celdas at:i at:j) position: ((i-1)*(25))@((j-1)*(25))+origen.
 			
 			(celdas at:i at:j) mouseAction: [
-				(estadojuego ~=1) ifTrue:[
-				(((D1 getValorJ ) = 1) & ((D2 getValorJ) = 1)) ifTrue:[
+				(juego getEstadoJuego ~=1) ifTrue:[
+				(((juego getValorDado: 1 ) = 1) & ((juego getValorDado: 2) = 1)) ifTrue:[
 					
-					(estadoturno = 1) ifTrue: [ 
-						 ultimojugador := 1.
+					(juego getEstadoTurno = 1) ifTrue: [ 
+						 juego setUltimoJugador: 1.
 						(celdas at: i at: j) color: (p1 getColorOff).
 						 p1 incrementarPuntos . 
-						puntaje1  contents: (p1 getPuntaje ) asString.
+						juego setPuntaje: 1 poner: (p1 getPuntaje).
 						(celdas at: i at:j) offColor:(p1 getColorOff).
 						 ]
 					ifFalse: [
-						ultimojugador := 2.
+						juego setUltimoJugador: 2.
 						(celdas at: i at: j) color: (p2 getColorOff).
 						 p2 incrementarPuntos . 
-						puntaje2  contents: (p2 getPuntaje ) asString.
+						juego setPuntaje: 2 poner: (p2 getPuntaje).
 						(celdas at: i at:j) offColor:(p2 getColorOff).
 						  ].
 					
-					estadojuego :=1.
-				 	self cambiarestados 
+					juego setEstadoJuego: 1.
+				 	juego cambiarestados 
 					]
 				ifFalse: [  
-				(estadojuego = 2) ifTrue: [ resguardo := (celdas at:i at:j). estadojuego := 3.
-				(estadoturno = 1) ifTrue: [  	
+				(juego getEstadoJuego = 2) ifTrue: [ resguardo := (celdas at:i at:j). juego setEstadoJuego: 3.
+				(juego getEstadoTurno = 1) ifTrue: [  	
 					(celdas at: i at: j) color: (p1 getColor). ]
 				ifFalse: [ (celdas at: i at: j) color: (p2 getColor) ] ]
 				ifFalse: [
 				aux:= self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j).
 				
-				(self isFull: tamInter) ifTrue:[ "si el tablero esta lleno se verifica que jugador tiene mas puntos y se llama al fin del juego"
-					(p1 getPuntaje >= p2 getPuntaje) ifTrue:[self finDelJuego: p1]
-																ifFalse:[self finDelJuego: p2]
+				(self isFull: n) ifTrue:[ "si el tablero esta lleno se verifica que jugador tiene mas puntos y se llama al fin del juego"
+					(p1 getPuntaje >= p2 getPuntaje) ifTrue:[juego finDelJuego: p1]
+																ifFalse:[juego finDelJuego: p2]
 					].
 				(aux = 1) ifTrue:[
-				estadojuego :=1.
-				 self cambiarestados.]
-				ifFalse:[ estadojuego := 2]
+				juego setEstadoJuego: 1.
+				 juego cambiarestados.]
+				ifFalse:[ juego setEstadoJuego: 2]
 					
 				].
 			].
