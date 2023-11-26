@@ -1,17 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "ImageMorph",
 	"category" : "cuadrilaterosss",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"juego",
-		"tablero",
-		"interfaz",
-		"sensor",
-		"j"
+		"IMAGEN"
 	],
-	"name" : "Ventana",
+	"name" : "Corazones",
 	"type" : "normal"
 }

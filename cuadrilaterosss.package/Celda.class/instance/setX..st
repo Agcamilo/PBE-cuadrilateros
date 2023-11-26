@@ -1,3 +1,3 @@
 initialization
 setX: posicionX
-	x:= posicionX.
+	x:= posicionX asInteger.

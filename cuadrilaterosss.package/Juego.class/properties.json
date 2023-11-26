@@ -1,0 +1,31 @@
+{
+	"commentStamp" : "",
+	"super" : "BorderedMorph",
+	"category" : "cuadrilaterosss",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"D1",
+		"D2",
+		"estadojuego",
+		"estadoturno",
+		"extra",
+		"p1",
+		"p2",
+		"puntaje1",
+		"puntaje2",
+		"tamInter",
+		"turno",
+		"ultimojugador"
+	],
+	"instvars" : [
+		"bPasarturno",
+		"tablero",
+		"interfaz",
+		"bTirar",
+		"bCora1",
+		"bCora2"
+	],
+	"name" : "Juego",
+	"type" : "normal"
+}

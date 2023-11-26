@@ -6,6 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"offcolor",
+		"color",
 		"nombre",
 		"puntaje",
 		"vidas"

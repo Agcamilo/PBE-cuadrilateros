@@ -1,14 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "ImageMorph",
 	"category" : "cuadrilaterosss",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"valor1",
-		"valor2"
+		"IMAGEN",
+		"VALOR",
+		"COMODIN"
 	],
-	"name" : "Dado",
+	"name" : "DADO",
 	"type" : "normal"
 }
