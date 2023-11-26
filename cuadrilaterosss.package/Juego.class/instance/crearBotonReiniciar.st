@@ -18,7 +18,7 @@ crearBotonReiniciar
 	boton target:[
 		opcion := UIManager default
 				chooseFrom: #('Reiniciar juego actual' 'Iniciar nuevo juego') lines: #(2 4) message: 'Reiniciar desde:'.
-		
+		(opcion = 0) ifFalse:[
 		(opcion =2) ifTrue:[
 				interfaz delete.
 				self jugar.
@@ -30,6 +30,6 @@ crearBotonReiniciar
 								self iniciar.
 							]
 		
-		].
+		]].
 	
 	
