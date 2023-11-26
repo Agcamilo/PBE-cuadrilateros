@@ -4,6 +4,9 @@ setColor
 	"scope: variable de instancia a usar: color"
 	|ven c1 c2 c3 c4 c5 c6 title|
 	
+	color:= Color yellow.
+	offcolor:= Color yellow.
+	
 	title:= StringMorph new.
 	ven:= SystemWindow new.
 	c1:= SimpleButtonMorph new.
