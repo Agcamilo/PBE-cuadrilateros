@@ -1,12 +1,18 @@
 funciones de inicio
 jugar
-|ju1 ju2 ini dim Ven aux logo bandera1 bandera2|
+"abre el menu inicial del juego donde se podra elegir el tamaño del tablero y el nombre y color de cada jugador"
+|ju1 ju2 ini dim Ven aux logo bandera1 bandera2 creditos|
 	p1:= Jugadores new.
 	p2:= Jugadores new.
 	Ven:= SystemWindow new.
 	Ven extent: 1050@600.
 	bandera1 := 0.
 	bandera2 := 0.
+	
+	creditos:= StringMorph new.
+	Ven addMorph: creditos.
+	creditos contents: 'Creditos: Camilo Aguirre. Joaquin Bianciotto. Julián Colombo. Yoel Mario Marain'.
+	creditos position: 0@580.
 	
 	ju1 := SimpleButtonMorph new.
 	ju1 position: 200@340.
@@ -17,7 +23,6 @@ jugar
 		bandera1 := 1.
 		p1 setNombre: 1.
 		p1 setColor.
-		"Ven removeMorph: ju1."
 		ju1 color: (Color r:46/255 g:155/255 b:119/255).
 		].
 
@@ -30,7 +35,6 @@ jugar
 		bandera2 := 1.
 		p2 setNombre: 2.
 		p2 setColor.
-		"Ven removeMorph: ju2."
 		ju2 color: (Color r:46/255 g:155/255 b:119/255).
 		].
 

@@ -1,5 +1,5 @@
 logica
-verificarCuadrilatero: aCelda hasta: aCelda2
+pintarCuadrilatero: aCelda hasta: aCelda2
 |bandera mayorX mayorY menorX menorY|
 
 ((aCelda getX) > (aCelda2 getX)) ifTrue: [ mayorX :=aCelda getX . menorX:=aCelda2 getX] "Esto para el control mas facil de la matriz"

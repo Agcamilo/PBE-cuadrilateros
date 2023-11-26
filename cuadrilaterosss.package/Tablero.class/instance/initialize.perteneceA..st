@@ -1,5 +1,6 @@
 initialization
 initialize: cantCeldas perteneceA: unJuego
+	"crea un tablero de n*n compuesto de celdas y le pasa el juego al que pertenece para usar sus atributos"
 	|celda origen n resguardo aux|
 	super initialize.
 	juego:= unJuego.
@@ -50,7 +51,7 @@ initialize: cantCeldas perteneceA: unJuego
 					(celdas at: i at: j) color: (p1 getColor). ]
 				ifFalse: [ (celdas at: i at: j) color: (p2 getColor) ] ]
 				ifFalse: [
-				aux:= self verificarCuadrilatero: resguardo hasta: (celdas at:i at:j).
+				aux:= self pintarCuadrilatero: resguardo hasta: (celdas at:i at:j).
 				
 				(self isFull: n) ifTrue:[ "si el tablero esta lleno se verifica que jugador tiene mas puntos y se llama al fin del juego"
 					(p1 getPuntaje >= p2 getPuntaje) ifTrue:[juego finDelJuego: p1]
